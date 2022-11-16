@@ -1,6 +1,8 @@
 # Exchange Rate Calculator
 
-# Live Version:
+# Live Version: https://krupkajohny.github.io/Exchange-Rate-Calculator/
+
+# AxchangeRate API: https://www.exchangerate-api.com/
 
 ## HTML
 
@@ -11,6 +13,7 @@
 
 ## JAVASCRIPT
 
-- basic fetch API practicing
-- basic DOM manipulation
-- bas
+- fetch API practicing
+- DOM manipulation
+- callback functions
+- input/change/click events
