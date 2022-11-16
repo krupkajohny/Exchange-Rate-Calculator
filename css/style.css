@@ -1,0 +1,227 @@
+/* 
+//////////////////////////////
+Font Import 
+//////////////////////////////
+*/
+/*  OPEN SANS */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+/*
+//////////////////////////////
+FONT SIZES (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+//////////////////////////////
+*/
+
+/* 
+//////////////////////////////
+SPACING SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+//////////////////////////////
+*/
+
+/* 
+//////////////////////////////
+CUSTOM PROPERTIES 
+//////////////////////////////
+*/
+
+:root {
+  /* Font */
+  --primary-font: 'Open Sans', sans-serif;
+
+  /* Colors */
+  --primary-color: #2ecc71;
+  --primary-dark-color: #575757;
+
+  /* Form elements colors */
+  --form-elements-background-color: #f5f5f5;
+  --success-color: #2ecc71;
+  --error-color: #e74c3c;
+
+  /* Form elements borders */
+  --form-elements-border-1px: 1px solid;
+
+  /* Font Sizes */
+  --heading-small-3-6: 3.6rem;
+  --heading-medium-4-4: 4.4rem;
+  --heading-large-5-2: 5.2rem;
+  --heading-xlarge-6-2: 6.2rem;
+  --heading-xxlarge-7-4: 7.4rem;
+
+  --paragraph-xxsmall-1-2: 1.2rem;
+  --paragraph-xsmall-1-4: 1.4rem;
+  --paragraph-small-1-6: 1.6rem;
+  --paragraph-medium-1-8: 1.8rem;
+  --paragraph-large-2-4: 2.4rem;
+  --paragraph-xlarge-3: 3rem;
+
+  /* Font Weights */
+  --font-weight-300: 300;
+  --font-weight-400: 400;
+  --font-weight-600: 600;
+  --font-weight-700: 700;
+  --font-weight-800: 800;
+
+  /* Border radiuses */
+  --border-radius-xsmall-5: 5px;
+  --border-radius-xsmall-10: 10px;
+  --border-radius-medium-15: 15px;
+  --border-radius-large-20: 20px;
+
+  /* Box shadow */
+  --box-shadow-small: 0 2px 5px 1px rgba(0 0 0 / 20%);
+}
+
+/* 
+//////////////////////////////
+GLOBAL RESET (EXCEPT FORM ELEMENTS)
+//////////////////////////////
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* 10px = 1rem, 1em = 16px  */
+  font-size: 62.5%;
+}
+
+/* 
+//////////////////////////////
+FORM ELEMENTS RESET 
+//////////////////////////////
+*/
+
+select,
+input,
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font: var(--font-weight-400) var(--paragraph-small-1-6) var(--primary-font);
+}
+
+body {
+  font: normal normal var(--font-weight-400) var(--paragraph-small-1-6) / 1 var(--primary-font);
+  color: var(--primary-dark-color);
+  line-height: 1;
+  background-color: var(--secondary-contrast);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+h1 {
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+p {
+  text-align: center;
+}
+
+.swap-rate-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.rate {
+  font: normal normal var(--font-weight-700) var(--paragraph-small-1-6) / 1 var(--primary-font);
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  box-shadow: 0 0 0 1px var(--primary-color) inset;
+  color: #fff;
+  background-color: var(--primary-color);
+  cursor: pointer;
+  border: none;
+  border-radius: var(--border-radius-xsmall-5);
+  height: 4rem;
+  padding: 0.5rem 1.2rem;
+}
+
+.btn:hover,
+.btn:active {
+  color: var(--primary-color);
+  background-color: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: var(--border-radius-xsmall-5);
+  padding: 0.5rem 1.2rem;
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: var(--box-shadow-small);
+  box-shadow: 0 0 0 1px var(--primary-color) inset;
+}
+
+.money-img {
+  width: 15rem;
+  margin-bottom: 2rem;
+}
+
+.currency {
+  padding: 4rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+/* 
+//////////////////////////////
+FORM BASIC STYLING
+//////////////////////////////
+*/
+
+/* form {
+  padding: 2rem;
+  border-radius: var(--border-radius-xsmall-5);
+  border: 4px solid var(--primary-light);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+} */
+
+input,
+select {
+  border: var(--form-elements-border-1px) var(--primary-dark-color);
+  background-color: var(--form-elements-background-color);
+  border-radius: var(--border-radius-xsmall-5);
+  height: 4rem;
+  padding: 1rem 2rem 1rem 1rem;
+}
+
+select {
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%20000002%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+  background-position: right 10px top 50%, 0, 0;
+  background-size: 10px auto, 100%;
+  background-repeat: no-repeat;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  box-shadow: var(--box-shadow-small);
+}
+
+#amount-one,
+#amount-two {
+  width: 20rem;
+}
